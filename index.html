@@ -15,6 +15,7 @@
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/aos.css">
+     <link rel="stylesheet" href="css/darkmode.css">
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/tooplate-gymso-style.css">
@@ -52,8 +53,10 @@
                     <li><a href="https://www.linkedin.com/in/gyan-p-a20539202/" class="fa fa-linkedin"></a></li>
                     <li><a href="https://github.com/GyanPrakashRaj" class="fa fa-github"></a></li>
                     <li><a href="https://api.whatsapp.com/send?phone=+917050945881&text=LET'S_FIX_BUG_ON_TEA_SOMEDAY_YOU_AND_ME💛" class="fa fa-whatsapp"></a></li>
+<!--                    <li> <button id=darkmode" class="darkmode" onclick="darkswitch()">Switch to Dark</button> </li>-->
+                    <li><img src="images/moon.png" id="dark-toggle"></li>
                 </ul>
-                
+<!--                    <img src="images/moon.png" id="darktoggle">-->
             </div>
 
         </div>
@@ -322,6 +325,42 @@
      <script src="js/aos.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
+<!--     <script src="js/darkmode.js"></script>-->
+     <script>
+         var darktoggle=document.getElementById("dark-toggle");
+
+         if(localStorage.getItem("theme")==null)
+         {
+             localStorage.setItem("theme","light");
+         }
+         let localData=localStorage.getItem("theme");
+
+         if(localData=="light")
+         {
+             darktoggle.src="images/moon.png";
+             document.body.classList.remove("dark-theme");
+         }
+         else if(localData=="dark")
+         {
+             darktoggle.src="images/sun.png";
+             document.body.classList.add("dark-theme");
+         }
+
+         darktoggle.onclick = darkswitch()
+         {
+             document.body.classList.toggle("dark-theme");
+             if(document.body.classList.contains("dark-theme"))
+             {
+                 darktoggle.src="images/sun.png";
+                 localStorage.setItem("theme","dark");
+             }
+             else
+             {
+                 darktoggle.src="images/moon.png";
+                 localStorage.setItem("theme","light");
+             }
+         }
+     </script>
 
 </body>
 </html>
