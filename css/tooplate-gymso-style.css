@@ -5,6 +5,10 @@ Tooplate 2119 Gymso Fitness
 https://www.tooplate.com/view/2119-gymso-fitness
 
 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
 
   @font-face {
       font-family: 'Plain';
@@ -31,14 +35,14 @@ https://www.tooplate.com/view/2119-gymso-fitness
   }
 
   :root {
-    --primary-color:        #f13a11;
+    --primary-color:        #e85a3a;
     --white-color:          #ffffff;
     --dark-color:           #171819;
-    --about-bg-color:       #404040;
-
+    --about-bg-color:       #ffffff;
+    --nav-color:            #0566d1;
     --gray-color:           #909090;
-    --link-color:           #f50b0b;
-    --p-color:              #ffffff;
+    --link-color:           #f25454;
+    --p-color:              #171819;
 
     --base-font-family:     'Plain', sans-serif;
     --font-weight-bold:     bold;
@@ -57,7 +61,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
     --menu-font-size:       14px;
 
     --border-radius-large:  100%;
-    --border-radius-small:  2px;
+    --border-radius-small:  4px;
   }
 
 
@@ -124,12 +128,17 @@ https://www.tooplate.com/view/2119-gymso-fitness
   strong {
     font-weight: var(--font-weight-bold);
     letter-spacing: 0;
+    color: var(--nav-color);
   }
 
   .section {
     padding: 7rem 0;
+    
   }
 
+  .section > p{
+    color: #171819;
+  }
 
   /* BUTTON */
 
@@ -147,7 +156,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
   }
 
   .custom-btn:hover {
-    color: var(--primary-color);
+    color: var(--dark-color);
   }
 
   .custom-btn:focus {
@@ -161,16 +170,16 @@ https://www.tooplate.com/view/2119-gymso-fitness
   .custom-btn.bg-color:focus {
     background: var(--white-color);
     border-color: transparent;
-    color: var(--primary-color);
+    color: var(--dark-color);
   }
 
   .bordered {
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 1px solid var(--dark-color);
+    color: var(--dark-color);
   }
 
   .bg-color {
-    background: var(--primary-color);
+    background: var(--dark-color);
     color: var(--white-color);
   }
 
@@ -220,7 +229,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.85;
+    opacity: 0.70;
   }
 
 
@@ -259,7 +268,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
   -----------------------------------------*/
 
   .navbar {
-    background: var(--dark-color);
+    background: var(--nav-color);
     padding: 1rem;
   }
 
@@ -329,7 +338,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
   }
 
   .navbar-toggler .navbar-toggler-icon {
-    background: var(--primary-color);
+    background: var(--dark-color);
     transition: background 10ms 300ms ease;
     display: block;
     width: 30px;
@@ -345,7 +354,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
     position: absolute;
     right: 0;
     left: 0;
-    background: var(--primary-color);
+    background: var(--dark-color);
     width: 30px;
     height: 2px;
     content: '';
@@ -373,6 +382,10 @@ https://www.tooplate.com/view/2119-gymso-fitness
     position: relative;
   }
 
+  .cover-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
 
   /*---------------------------------------
      CLASS               
@@ -407,6 +420,10 @@ https://www.tooplate.com/view/2119-gymso-fitness
     height: 3.5rem;
     line-height: 3.5rem;
     text-align: center;
+  }
+  .text
+  {
+    font-family: 'Poppins', sans-serif;
   }
 
 
@@ -521,6 +538,14 @@ https://www.tooplate.com/view/2119-gymso-fitness
   }
 
 
+  .designation
+  {
+    font-weight: var(--font-weight-light);
+    color: var(--nav-color);
+    text-align: center;
+    opacity: 0.85;
+    font-size: 0.9rem;
+  }
   /*---------------------------------------
      CONTACT              
   -----------------------------------------*/
@@ -549,7 +574,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
   }
 
   button#submit-button:hover {
-    background: var(--primary-color);
+    background: var(--dark-color);
   }
 
   .contact h2 + p {
@@ -668,3 +693,34 @@ https://www.tooplate.com/view/2119-gymso-fitness
       display: block;
     }
   }
+
+  .highlight{
+    color: var(--dark-color);
+  }
+
+ /* -----------------------
+    FOOTER 
+--------------------------*/
+
+.footer{
+  display: flex;
+  align-items: center;
+  color: var(--white-color);  
+  justify-content: space-around;
+  width: 100vw;
+  height: 8vh;
+  background-color: var(--nav-color);
+  font-size: 0.8rem;
+}
+
+.first{
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  /* word-spacing: 0.1rem; */
+  /* letter-spacing: 0.1rem; */
+}
+
+.first span img{
+  width: 1rem;
+}
