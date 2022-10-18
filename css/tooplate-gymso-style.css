@@ -41,15 +41,16 @@ https://www.tooplate.com/view/2119-gymso-fitness
     --dark-color:           black;
     --p-color:              #171819;
     --about-bg-color:       #ffffff;
-
+    --social-icns-color :   rgb(6, 6, 58) ;
     /*--white-color:          black;*/
     /*--dark-color:           white;*/
     /*--p-color:              white;*/
     /*--about-bg-color:       black;*/
-
+    
     --nav-color:            #0566d1;
     --gray-color:           #909090;
     --link-color:           #f25454;
+    --team-thumb-bg-color:  rgba(37, 93, 150, 0.252);
 
 
 
@@ -78,6 +79,8 @@ https://www.tooplate.com/view/2119-gymso-fitness
   --dark-color:           white;
   --p-color:              white;
   --about-bg-color:       black;
+  --team-thumb-bg-color: rgba(31, 141, 219, 0.767);
+  --social-icns-color : white ;
 }
 
   body {
@@ -538,19 +541,45 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
   .team-thumb {
     position: relative;
+    padding-top: 5rem;
+    
+  }
+  .ml-lg-ml-lg-auto{
+    background-color: var(--team-thumb-bg-color);
+    border-radius: 12px;
+    box-shadow: 3px 1px 5px rgba(19, 16, 16, 0.293);
   }
 
+
   .team-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: var(--white-color);
-    border-radius: 0 0 2px 2px;
-    box-shadow: 6px 0 38px rgba(20,20,20,0.10);
-    padding: 20px;
+    border-radius: 0px 0px 15px 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 30px;
     position: relative;
+    background-color: rgba(37, 93, 150, 0);
   }
 
   .team-info span {
     font-weight: var(--font-weight-light);
-    opacity: 0.85;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: 1;
+    padding-top: 5px;
+  }
+  .contact-me{
+    padding-bottom: 0;
+    padding-top: 12px;
+  }
+  .social-icns a {
+    color: var(--social-icns-color);
+    font-size: 20px;
+  }
+  .social-icns .fa-linkedin,
+  .social-icns .fa-github{
+    padding-right: 15px;
   }
 
   .team-info .social-icon {
@@ -675,7 +704,13 @@ https://www.tooplate.com/view/2119-gymso-fitness
   /*---------------------------------------
      RESPONSIVE STYLES              
   -----------------------------------------*/
-
+  
+  @media screen and (max-width: 1202px) {
+    .team-info h3{
+      display: block;
+      text-align: center;
+    }
+  }
   @media screen and (max-width: 992px) {
 
     .section {
@@ -701,6 +736,9 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
     .modal-content {
       padding: 2rem;
+    }
+    .ml-lg-ml-lg-auto{
+      margin:0 auto 0 auto;
     }
   }
 
