@@ -1,0 +1,4 @@
+fastapi[all]==0.85.1
+pytube==12.1.0
+wget==3.2
+requests
